@@ -112,7 +112,7 @@ router.get("/ecommerce/easydeals", authMiddleware, (req, res) => {
 
 
 router.get("/privacyPolicy", (req, res) => {
-  res.render("privacyPolicy");
+  res.render("policy");
   // res.json({ message: "Privacy Policy" });
 });
 
