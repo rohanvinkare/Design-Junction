@@ -57,7 +57,7 @@ To set up the project on your PC, follow these steps:
 
    ... (and other templates similarly)
    
-![Template](./public/imgs_not_touse/templates.png)
+
 
 <a name="how-it-works"></a>
 ## How It Works
