@@ -1,7 +1,5 @@
-# Course ::
-
-https://youtube.com/playlist?list=PLQDioScEMUhl3n7ibx-sl-Y_d__dFrTSr&si=yGvCR3ujbWZTxEf6
-
+# You can creat users like below 
+## on the time of login to creat admin you need to go to the Mongo Db databse and manually update the role as 1 and after that login again with same credaintals you will be redairected to admin-panel 
 # Admin Details
 
 ```
