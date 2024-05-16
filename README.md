@@ -3,8 +3,6 @@
 ## Description
 Design Junction is a modular website maker designed to simplify website creation by providing dynamic templates for various industries like Food, Education, Travel, Blog, Portfolio, E-commerce, Finance, Healthcare, etc. The project aims to make the coder's life easier by generating final HTML, CSS, and JS code after template editing. It also includes an admin panel and manager panel with role-based access for CRUD operations.
 
-
-   
 ## Features
 - **Easily Customizable:** Intuitive tools for tweaking design, content, and functionality without coding.
 - **Wide Templating Options:** Diverse range of design templates and layouts.
@@ -18,9 +16,8 @@ Design Junction is a modular website maker designed to simplify website creation
    - Description: Dynamic layout, travel diaries, destination highlights, and responsive design.
 
    ... (and other templates similarly)
-
-   - ![Template](./public/imgs_not_touse/templates.png)
-
+   
+![Template](./public/imgs_not_touse/templates.png)
 
 ## How It Works
 1. **Select Template:** Choose a template from the available options.
@@ -39,21 +36,30 @@ To set up the project on your PC, follow these steps:
 
 1. **Clone Repository:**
    ```bash
-    [ git clone https://github.com/TeamVishisht/design-junction.git](https://github.com/rohanvinkare/Design-Junction.git)
+   git clone https://github.com/TeamVishisht/design-junction.git
 
-
-2. **Go to File**
-   ```bash
-   npm install
+2. **Set Up**
+   Go to the .env File and set your MongoDB string for database access.
 
 3. **Install Dependencies**
-    ```bash
+   ```bash
    npm install 
 
 4. **Run Project**
-    ```bash
+   ```bash
    nodemon index.js
 
+5. **Visit Site**
+   Go to http://localhost:3000/ to visit the site and create your first user.
 
-## Web Site Preview 
- - ![Template](public/imgs_not_touse/home.jpeg)
+6. **Admin Creation**
+   After creating the first user, manually update the role to 1 in the MongoDB database. Log in to the website again with the same credentials, and this time you will access the admin panel.
+
+## Website Preview 
+![Template](public/imgs_not_touse/home.jpeg)
+
+## Admin Panel Preview 
+![Template](public/imgs_not_touse/admin-panel.jpeg)
+
+## Manger Panel Preview 
+![Template](public/imgs_not_touse/manager-panel.jpeg)
