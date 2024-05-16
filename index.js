@@ -43,7 +43,7 @@ app.get("/api/admin/all-routes", authMiddleware, routerController.getAllRoutes)
 //============================pages to render===========================
 
 app.get("/", (req, res) => {
-  res.render("HomePage");
+  res.render("homePage");
 })
 
 app.get("/login", (req, res) => {
@@ -64,9 +64,6 @@ app.get("/manager-panel", (req, res) => {
 app.get("/api/get-user", (req, res) => {
   res.render("./internal/all-user-curd.ejs");
 })
-
-
-
 
 
 
