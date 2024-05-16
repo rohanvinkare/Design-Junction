@@ -7,7 +7,7 @@ const cookieParser = require('cookie-parser');
 const app = express();
 
 app.set('view engine', 'ejs'); // Assuming you are using EJS
-app.set('views', '/var/task/views'); // Set the views directory
+
 
 app.use(cookieParser());
 
