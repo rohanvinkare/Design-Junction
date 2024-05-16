@@ -5,7 +5,9 @@ mongoose.connect("mongodb+srv://rohanvinkare2022:nhG5o9bcBMOyKGtD@rohanvinkare.f
 const express = require("express");
 const cookieParser = require('cookie-parser');
 const app = express();
-app.set('view engine', 'ejs');
+
+app.set('view engine', 'ejs'); // Assuming you are using EJS
+app.set('views', '/var/task/views'); // Set the views directory
 
 app.use(cookieParser());
 
