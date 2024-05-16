@@ -39,7 +39,7 @@ To set up the project on your PC, follow these steps:
 
 1. **Clone Repository:**
    ```bash
-  [ git clone https://github.com/TeamVishisht/design-junction.git](https://github.com/rohanvinkare/Design-Junction.git)
+    [ git clone https://github.com/TeamVishisht/design-junction.git](https://github.com/rohanvinkare/Design-Junction.git)
 
 
 2. **Go to File**
