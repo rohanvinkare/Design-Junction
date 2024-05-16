@@ -1,6 +1,6 @@
 # You can creat users like below 
 
-## Afer Registerning the first user to creat Admin you need to go to the Mongo Db databse and manually update the role as 1 and after that login again with same credaintals you will be redairected to admin-panel 
+## After registering the first user to create an admin, you need to go to the MongoDB database and manually update the role to 1. After that, login again with the same credentials, and you will be redirected to the admin panel.
 
 
 # Admin Details
