@@ -1,6 +1,18 @@
-# Course :: https://youtube.com/playlist?list=PLQDioScEMUhl3n7ibx-sl-Y_d__dFrTSr&si=yGvCR3ujbWZTxEf6
+# Course ::
+
+https://youtube.com/playlist?list=PLQDioScEMUhl3n7ibx-sl-Y_d__dFrTSr&si=yGvCR3ujbWZTxEf6
 
 # Admin Details
+
+```
+ {
+ "name": "Admin",
+ "email": "admin@gmail.com",
+ "password": "adminofDJ"
+ "role":1
+}
+
+
 
 // To Check Rolls Login as admin and check in the Rolls Section (0->User, 1->Admin ,etc)
 
@@ -66,6 +78,7 @@
 "password": "rancho"
 "role":0
 }
+```
 
 # users Details
 
