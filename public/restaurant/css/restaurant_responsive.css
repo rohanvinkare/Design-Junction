@@ -1,0 +1,349 @@
+/* ***contaner *** */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ================== Start beack-points ================== */
+@media only screen and (max-width: 1210px) {
+  .container {
+    max-width: 1090px;
+  }
+
+  .header__title {
+    font-size: 7vw;
+  }
+
+  .header__text {
+    max-width: 46vw;
+    font-size: 2vw;
+  }
+
+  .header__logo {
+    width: 7.5vw;
+  }
+
+  .header__login-btn {
+    padding: 0.8vw 2.7vw;
+  }
+
+  .breackfast-gallery__boxs {
+    width: 22.55vw;
+  }
+
+  .breackfast-boxs__img {
+    width: 43vw;
+  }
+
+  .properteies__background {
+    background-size: 1403px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .header {
+    margin-bottom: 5.5rem;
+  }
+
+  .container {
+    max-width: 690px;
+  }
+
+  .header__menu-bar--left {
+    width: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+  }
+
+  .header__logo {
+    width: 7.4rem;
+  }
+
+  .header__title {
+    font-size: 4.3rem;
+  }
+
+  .header__section--botten--right {
+    position: relative;
+    width: 45%;
+    display: none;
+  }
+
+  .header__menu-container--bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+
+  .header__text {
+    font-size: 19px;
+    margin-left: 8px;
+    max-width: 100%;
+  }
+
+  .breackfast-gallery {
+    justify-content: center;
+    gap: 0.9rem;
+  }
+
+  .breackfast-gallery__boxs {
+    width: 39.6vw;
+  }
+
+  .breackfast-boxs__box {
+    width: 50vw;
+    left: 1.2rem;
+  }
+
+  .breackfast-boxs__img {
+    width: 59vw;
+    right: 5vw;
+  }
+
+  .breackfast-boxs__red-circle {
+    width: 11vw;
+    height: 11vw;
+    left: 2rem;
+  }
+
+  .delivery__img {
+    left: 57px;
+    top: 314px;
+  }
+
+  .burger-menu__items {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 238px);
+    gap: 20px;
+    justify-content: center;
+    grid-auto-rows: 238px;
+  }
+
+  .footer-section--flex {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-section__contact {
+    height: unset;
+  }
+
+  .footer-section__img-box {
+    max-width: 77vw;
+    height: 77vw;
+  }
+
+  .footer-section__contact--email {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: unset;
+    margin-bottom: 30px;
+  }
+
+  .footer-section__contact--info {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footer-section__contact--info__location p {
+    max-width: unset;
+    line-height: 26px;
+  }
+
+  .footer-section__img-box--red {
+    width: 100%;
+    left: unset;
+    top: 41vw;
+    height: 32vw;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .container {
+    max-width: 21.9rem;
+  }
+
+  .header__title {
+    font-size: 14.4vw;
+  }
+
+  .header__text {
+    font-size: 4.9vw;
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .header__menu-bar--right ul {
+    width: 14rem;
+  }
+
+  .header__menu-bar--right ul li {
+    padding: 1.5rem;
+  }
+
+  .header__view-btn {
+    padding: 0.6rem 1.5rem;
+    margin-top: 2.2rem;
+    font-size: 0.87rem;
+    margin-left: 0.5rem;
+  }
+
+  .breackfast-gallery__boxs {
+    width: 100%;
+  }
+
+  .login-box--form {
+    width: 68vw;
+  }
+
+  .breackfast-boxs {
+    margin-bottom: 10rem;
+  }
+
+  .breackfast-boxs__box {
+    padding: 22px 38px;
+    width: 48vw;
+    left: 7px;
+  }
+
+  .breackfast-boxs__text {
+    line-height: 24px;
+  }
+
+  .properteies__boxes {
+    width: 205px;
+    padding: 23px;
+  }
+
+  .properteies__boxes--title {
+    font-size: 27px;
+    width: 102px;
+  }
+
+  .delivery {
+    padding-top: 0 !important;
+  }
+
+  .delivery__box {
+    position: absolute;
+    z-index: 3;
+    background-color: white;
+    box-shadow: 7px 7px 20px 0px #2222228a;
+    width: 57vw;
+    height: auto;
+    right: 50px;
+    bottom: 200px;
+    padding: 30px;
+  }
+
+  .delivery__box--title {
+    font-size: 24px;
+  }
+
+  .delivery__box--text {
+    line-height: 21px;
+    font-size: 14px;
+  }
+
+  .delivery__img {
+    width: 75vw;
+  }
+
+  .american-food__small-title {
+    font-size: 18px;
+  }
+
+  .american-food__big-title {
+    font-size: 60px;
+  }
+
+  .american-food__button {
+    padding: 12px 21px;
+  }
+
+  .burger-menu__item__burger-name {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .burger-menu__item__btn {
+    padding: 11px 8px;
+    font-size: 10px;
+  }
+
+  .foodlist-slider__slid-box {
+    width: 350px;
+  }
+
+  .foodlist-slider__slid-box--items {
+    width: 699px;
+    height: 459px;
+    transform: translate(0px, 0px);
+  }
+
+  .foodlist-slider__slid-box--item h3 {
+    margin-bottom: 0;
+  }
+
+  .foodlist-slider__slid-box--item p {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .foodlist-slider__slid-box--item button {
+    width: 120px;
+  }
+
+  .footer-section__contact h2 {
+    font-size: 7vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header__login-btn {
+    padding: 5px 19px;
+  }
+
+  .foodlist-slider--flex {
+    display: flex;
+    justify-content: center;
+  }
+
+  .foodlist-slider__slid-box--btn {
+    width: 23px;
+    background-color: #bbbbbb;
+    color: #00000000;
+  }
+
+  .foodlist-slider__slid-box {
+    width: 250px;
+  }
+
+  .foodlist-slider__slid-box--items {
+    width: 499px;
+    height: 459px;
+    transform: translate(0px, 0px);
+  }
+
+  .foodlist-slider__slid-box--item p {
+    font-size: 15px;
+    line-height: 19px;
+  }
+
+  .foodlist-slider__slid-box--item {
+    padding: 30px 46px;
+  }
+
+  .footer-section__contact--email input[type="email"] {
+    width: 198px;
+  }
+}
+
+/* ================== End brack-points ================== */

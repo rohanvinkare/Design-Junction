@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Junction | Login Page</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+    <link
+      rel="shortcut icon"
+      href="/loginPage/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="/loginPage/style.css" />
+  </head>
+
+  <body>
+    <div class="loader"></div>
+
+    <div class="container" id="container">
+      <div class="form-container register-container">
+        <!-- <form action="/api/register" id="signupForm" method="post"> -->
+        <form id="signupForm">
+          <h1>Register</h1>
+          <input
+            type="text"
+            name="name"
+            id="registerUsername"
+            placeholder="Username"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="registerEmail"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="registerPasswordInput"
+            class="passwordInput"
+            placeholder="Password (At Least 6 characters)"
+            required
+          />
+
+          <i
+            id="registerPasswordIcon"
+            class="fas fa-regular fa-lock"
+            onclick="togglePasswordVisibility('registerPasswordInput', 'registerPasswordIcon')"
+          ></i>
+          <!-- <select name="role" id="registerSelectRoles">
+            <option value="" disabled selected>Select Role</option>
+            <option value="User">User</option>
+            <option value="Programmer">Programmer</option>
+            <option value="Admin">Admin</option>
+          </select> -->
+
+          <button type="submit">signup</button>
+          <!-- <button type="button" onclick="signup()">Register</button> -->
+          <span>or use your account</span>
+          <div
+            class="social-container"
+            onclick="loginWithGoogle()"
+            style="cursor: pointer;"
+          >
+            <a href="#" class="social"
+              ><img src="/loginPage/google.png" alt=""
+            /></a>
+            <p>Connect from Google</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-container login-container">
+        <!-- <form action="/login" id="loginForm" method="post"> -->
+        <form id="loginForm">
+          <h1>Login</h1>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="passwordInput"
+            placeholder="Password (At Least 6 characters)"
+            required
+          />
+          <i
+            id="loginPasswordIcon"
+            class="fas fa-regular fa-lock"
+            onclick="togglePasswordVisibility('loginPasswordInput', 'loginPasswordIcon')"
+          ></i>
+          <!-- <select name="role" id="loginSelectRoles">
+            <option value="" disabled selected>Select Role</option>
+            <option value="User">User</option>
+            <option value="Programmer">Programmer</option>
+            <option value="Admin">Admin</option>
+          </select> -->
+          <div class="content">
+            <div class="checkbox">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              <label>Remember me</label>
+            </div>
+            <div class="pass-link">
+              <a href="#">Forgot password?</a>
+            </div>
+          </div>
+
+          <button type="submit">Login</button>
+
+          <!-- <button type="button" onclick="login()">Login</button> -->
+          <span>or use your account</span>
+
+          <div
+            class="social-container"
+            onclick="loginWithGoogle()"
+            style="cursor: pointer;"
+          >
+            <a href="#" class="social"
+              ><img src="/loginPage/google.png" alt=""
+            /></a>
+            <p>Connect from Google</p>
+          </div>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1 class="title">Hey <br />Peer!</h1>
+            <p>
+              If You already have an account, login here and start editing the
+              template.
+            </p>
+            <button class="ghost" id="login">
+              Login
+              <i class="lni lni-arrow-left login"></i>
+            </button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1 class="title">
+              Start editing<br />
+              the templates
+            </h1>
+            <p>
+              If you don't have an account yet, join us and start your journey.
+            </p>
+            <button class="ghost" id="register">
+              Register
+              <i class="lni lni-arrow-right register"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/loginPage/script.js" async></script>
+    <!-- <script src="../index.js"></script> -->
+
+    <script
+      src="https://kit.fontawesome.com/76efa9e3c8.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-storage.js"></script>
+
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyAI7D6X54bdxcwz9g8UGS1BZg1qkbHDR80",
+        authDomain: "modular-website-maker.firebaseapp.com",
+        projectId: "modular-website-maker",
+        storageBucket: "modular-website-maker.appspot.com",
+        messagingSenderId: "506404218237",
+        appId: "1:506404218237:web:6bb5e55db5107fb830d814",
+      };
+
+      firebase.initializeApp(firebaseConfig);
+
+      //=================================Register the User==============================================
+
+      document
+        .getElementById("signupForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(this);
+          const name = formData.get("name");
+          const email = formData.get("email");
+          const password = formData.get("password");
+
+          try {
+            const response = await fetch("/api/register", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ name, email, password }), // Send data as JSON
+            });
+
+            const data = await response.json();
+            if (data.success) {
+              // Registration successful, redirect to login page or any other page
+              window.location.href = "/login"; // Redirect to login page
+            } else {
+              // Handle registration failure, show error message if needed
+              console.error("Registration failed:", data.msg);
+              document.getElementById("responseMsg").innerText = data.msg;
+            }
+          } catch (error) {
+            console.error("Error:", error);
+          }
+        });
+
+      //==================================== Login The User ============================================
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          const formData = new FormData(this);
+          const email = formData.get("email");
+          const password = formData.get("password");
+
+          try {
+            const response = await fetch("/api/login", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+            if (data.success) {
+              // Save the JWT token to local storage
+              localStorage.setItem("accessToken", data.accessToken);
+              // Extract user ID from the response
+
+              const Role = data.data.role;
+              console.log(Role, data.data.role, data.success, data.accessToken);
+
+              switch (Role) {
+                case 1:
+                  window.location.href = "/admin-panel";
+                  break;
+                case 2:
+                  window.location.href = "/manager-panel";
+                  break;
+                case 3:
+                  window.location.href = "/editor-panel";
+                  break;
+                default:
+                  window.location.href = "/";
+              }
+            } else {
+              document.getElementById("responseMsg").innerText = data.msg;
+            }
+          } catch (error) {
+            console.error("Error:", error);
+          }
+        });
+    </script>
+  </body>
+</html>

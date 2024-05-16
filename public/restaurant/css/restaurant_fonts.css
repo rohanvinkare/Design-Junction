@@ -1,0 +1,21 @@
+@font-face {
+  font-family: alata;
+  src: url("../font/Alata-Regular.ttf");
+}
+@font-face {
+  font-family: kalam;
+  src: url("../font/Kalam-Regular.ttf");
+}
+@font-face {
+  font-family: mont;
+  src: url("../font/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: opensans;
+  src: url("../font/OpenSans-Regular.ttf");
+}
+@font-face {
+  font-family: ubuntu;
+  src: url("../font/Ubuntu-Regular.ttf");
+}

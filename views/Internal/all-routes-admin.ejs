@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Data Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      table {
+        width: 80%;
+        border-collapse: collapse;
+        margin: auto;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Routes That Are We Have On Website</h1>
+    <table id="routeTable">
+      <thead>
+        <tr>
+          <th>Path</th>
+          <th>Methods</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to fetch data from API
+        async function fetchData() {
+          const token = localStorage.getItem("accessToken"); // Get access token from localStorage
+
+          try {
+            const response = await fetch("/api/admin/all-routes", {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${token}`, // Add access token to headers
+                "Content-Type": "application/json",
+              },
+            });
+
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+
+            const data = await response.json();
+            populateTable(data.data); // Call function to populate table
+          } catch (error) {
+            console.error("There was a problem fetching the data:", error);
+          }
+        }
+
+        // Function to populate table with API data
+        function populateTable(data) {
+          const tableBody = document.querySelector("#routeTable tbody");
+
+          data.forEach((route) => {
+            const row = tableBody.insertRow();
+            const pathCell = row.insertCell(0);
+            const methodsCell = row.insertCell(1);
+
+            pathCell.textContent = route.path;
+            methodsCell.textContent = Object.keys(route.methods).join(", ");
+          });
+        }
+
+        fetchData(); // Call fetch data function when page is loaded
+      });
+    </script>
+  </body>
+</html>

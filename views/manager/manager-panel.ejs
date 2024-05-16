@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager Panel</title>
+    <link
+      rel="stylesheet"
+      href="/1_internalFiles/manager/manager-public-CSS.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon" />
+
+    <style>
+      /* Custom styles for the sticky navbar */
+      .sticky-top {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+        background-color: #ffffff; /* White background */
+      }
+
+      .navbar-brand {
+        font-weight: bold;
+        color: #333333; /* Dark text color */
+      }
+
+      .navbar-nav .nav-link {
+        color: #555555; /* Medium dark text color */
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #007bff; /* Blue color on hover */
+      }
+
+      .navbar-toggler-icon {
+        background-color: #555555; /* Dark color for the toggler icon */
+      }
+
+      /* Optional: Add padding to navbar items */
+      .navbar-nav {
+        padding-right: 20px;
+        text-align: center;
+      }
+
+      .navbar-nav .nav-item {
+        padding: 0px 30px;
+      }
+      #navbarNav {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: #007bff;"
+          >Manager Panel</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#target1">Users </a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#target2">Routes</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#target3">Categories</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="target1"></div>
+    <div class="spacing"></div>
+
+    <!-- //===========================User Table======================== -->
+    <h1>User Data Table</h1>
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+
+    <!-- //------------------------------- CURD For Users ----------------------------- -->
+
+    <div class="form-container">
+      <form id="createUserForm">
+        <h2>Create User</h2>
+        <input type="text" placeholder="Name" name="name" required />
+        <input type="text" placeholder="Email" name="email" required />
+        <input
+          type="text"
+          placeholder="Role ( 0 -> User , 2 -> Manager , 3 -> Editor )"
+          name="role"
+          required
+        />
+        <input type="submit" value="Create User" />
+      </form>
+      <form id="updateUserForm">
+        <h2>Update User</h2>
+        <input type="text" placeholder="User ID" name="id" required />
+        <input type="text" placeholder="New Name" name="name" required />
+        <input type="text" placeholder="New Role" name="role" required />
+        <input type="submit" value="Update User" />
+      </form>
+    </div>
+    <div id="target2"></div>
+    <div class="spacing"></div>
+
+    <!-- //===========================Routes that we have  Table======================== -->
+    <h1>Routes Available</h1>
+    <table id="routeTable">
+      <thead>
+        <tr>
+          <th>Path</th>
+          <th>Methods</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+
+    <div id="target3"></div>
+
+    <div class="spacing"></div>
+
+    <!-------------------------table for categories ------------->
+    <h1>Categories Table</h1>
+    <table id="categoryTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+    <!-- //------------------------------- CURD For Categories ----------------------------- -->
+    <div class="form-container">
+      <form id="createCategoryForm">
+        <h2>Create Category</h2>
+        <input
+          type="text"
+          placeholder="Category Name"
+          name="categoryName"
+          required
+        />
+        <input type="submit" value="Create Category" />
+      </form>
+
+      <form id="deleteCategoryForm">
+        <h2>Delete Category</h2>
+        <input
+          type="text"
+          placeholder="Category ID"
+          name="categoryId"
+          required
+        />
+        <input type="submit" value="Delete Category" />
+      </form>
+    </div>
+
+    <script src="/1_internalFiles/manager/manager-public-JS.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

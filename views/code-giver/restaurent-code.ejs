@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        /* Add your CSS styles here */
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="container">Your Template</h1>
+    
+    <div class="container">
+        <h2>HTML Code</h2>
+        <pre>
+            <code id="html-code">
+      
+                &lt;body dir="ltr"&gt;
+  &lt;header class="header"&gt;
+    &lt;!-- Navbar Start --&gt;
+    &lt;section class="header__section--top"&gt;
+      &lt;div class="container header__menu-container--top"&gt;
+        &lt;div class="header__menu-bar--left"&gt;
+          &lt;img class="header__logo" src="/restaurant/images/Logo.png" alt="burger" /&gt;
+          &lt;button class="header__login-btn"&gt;Login&lt;/button&gt;
+
+          &lt;div class="header__account-profile"&gt;
+            &lt;div class="header__account-profile--pict"&gt;
+              &lt;img src="images/peson 1.png" alt="profile" /&gt;
+            &lt;/div&gt;
+
+            &lt;p class="header__account-profile-btn"&gt;&#10094;&lt;/p&gt;
+          &lt;/div&gt;
+
+          &lt;div class="login-box hidden"&gt;
+            &lt;span class="login-box__close-btn"&gt;&#10006;&lt;/span&gt;
+            &lt;form class="login-box--form" autocomplete="on"&gt;
+              &lt;h3 class="login-box__title"&gt;Welcome back !&lt;/h3&gt;
+              &lt;input class="login-box__name" id="name" type="text" name="name" required placeholder="Email"
+                value="dhoni7@gmail.com" /&gt;
+
+              &lt;input style="margin-bottom: -40px;" type="password" class="login-box__pass" id="pass" name="password"
+                minlength="8" required placeholder="password" value="Thala7" /&gt;
+
+              &lt;svg viewBox="0 0 24 24" class="login-box__pass--eye" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class=""&gt;
+                &lt;g id="SVGRepo_bgCarrier" stroke-width="0"&gt;&lt;/g&gt;
+                &lt;g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                  stroke-width="0.528"&gt;&lt;/g&gt;
+                &lt;g id="SVGRepo_iconCarrier"&gt;
+                  &lt;path
+                    d="M12 5C8.24261 5 5.43602 7.4404 3.76737 9.43934C2.51521 10.9394 2.51521 13.0606 3.76737 14.5607C5.43602 16.5596 8.24261 19 12 19C15.7574 19 18.564 16.5596 20.2326 14.5607C21.4848 13.0606 21.4848 10.9394 20.2326 9.43934C18.564 7.4404 15.7574 5 12 5Z"
+                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+                  &lt;path
+                    d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+                &lt;/g&gt;
+              &lt;/svg&gt;
+              &lt;svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="login-box__pass--eye-off"&gt;
+                &lt;g id="SVGRepo_bgCarrier" stroke-width="0"&gt;&lt;/g&gt;
+                &lt;g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/g&gt;
+                &lt;g id="SVGRepo_iconCarrier"&gt;
+                  &lt;path
+                    d="M9.76404 5.29519C10.4664 5.10724 11.2123 5 12 5C15.7574 5 18.564 7.4404 20.2326 9.43934C21.4848 10.9394 21.4848 13.0606 20.2326 14.5607C18.564 16.5596 15.7574 19 12 19C8.24261 19 5.43602 16.5596 3.76737 14.5607C3.32699 14.0991 2.96045 13.6067 2.67112 13.0994M5.29519 9.76404C5.10724 10.4664 5 11.2123 5 12C5 14.2091 5.84344 16.2329 7.37355 17.7629C8.90362 19.2929 10.9264 20.1364 13.1356 20.1364C14.0704 20.1364 15.0011 19.9526 15.8951 19.5879M9.76404 18.7048C10.4065 18.8377 11.0636 18.908 11.7307 18.908C14.0786 18.908 16.2954 17.8877 17.7857 16.3975C19.2759 14.9072 20.2954 12.6904 20.2954 10.3425C20.2954 9.67537 20.2251 9.01827 20.0922 8.3758M5.53095 4.46905L2.66852 1.60662M2.66852 22.3315L5.53095 19.469M19.469 5.53095L22.3315 2.66852M22.3315 22.3315L19.469 19.469"
+                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;/path&gt;
+                  &lt;path d="M18.4474 18.4474L21.4474 21.4474" stroke="#000000" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round"&gt;&lt;/path&gt;
+                &lt;/g&gt;
+              &lt;/svg&gt;
+              &lt;button type="submit" class="login-box__submit-btn"&gt;Login&lt;/button&gt;
+            &lt;/form&gt;
+            &lt;div class="login-box--options"&gt;
+              &lt;a href="#" class="login-box--forgot-password"&gt;Forgot password?&lt;/a&gt;
+              &lt;a href="#" class="login-box--register-now"&gt;Register now!&lt;/a&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="header__menu-bar--right"&gt;
+          &lt;nav class="header__navbar"&gt;
+            &lt;a href="#" class="header__navbar--item"&gt;Home&lt;/a&gt;
+            &lt;a href="#" class="header__navbar--item"&gt;Menu&lt;/a&gt;
+            &lt;a href="#" class="header__navbar--item"&gt;Gallery&lt;/a&gt;
+            &lt;a href="#" class="header__navbar--item"&gt;About&lt;/a&gt;
+            &lt;a href="#" class="header__navbar--item"&gt;Contact&lt;/a&gt;
+          &lt;/nav&gt;
+          &lt;div class="header__search-box"&gt;
+            &lt;input type="text" class="header__search-input" placeholder="Search for food" /&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"&gt;
+              &lt;circle cx="11" cy="11" r="8"&gt;&lt;/circle&gt;
+              &lt;line x1="21" y1="21" x2="16.65" y2="16.65"&gt;&lt;/line&gt;
+            &lt;/svg&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- Navbar End --&gt;
+  &lt;/header&gt;
+&lt;/body&gt;
+
+            </code>
+        </pre>
+        <button class="button" onclick="copyHtmlCode()">Copy HTML Code</button>
+        
+        <h2>CSS Code</h2>
+        <pre>
+            <code id="css-code">
+/* Add your CSS styles here */
+body {
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+  }
+  
+  * {
+    font-family: opensans;
+  }
+  
+  /* ================== Start header ================== */
+  /* style of section Top of header */
+  .header {
+    margin-bottom: 7.5rem;
+  }
+  .header__section--top {
+    margin-top: 1rem;
+  }
+  .header__menu-container--top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__menu-bar--left {
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__logo {
+    width: 9.4rem;
+  }
+  .search-box {
+    border: none;
+    border-right: var(--secondary-color) solid 3px;
+    border-radius: 2px;
+    height: 29px;
+  }
+  .search-box:focus {
+    outline: none;
+  }
+  .header__account-profile {
+    align-items: center;
+    gap: 10px;
+    display: flex;
+  }
+  .header__account-profile--pict {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    overflow: hidden;
+  }
+  .header__account-profile--pict img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* style of login botton */
+  .header__login-btn {
+    background-color: #fff;
+    color: var(--primary-color);
+    cursor: pointer;
+    border: none;
+    padding: 0.6rem 1.9rem;
+    border-radius: 0.5rem;
+    border: 0.15rem solid var(--primary-color);
+    transition: 0.1s;
+  }
+  
+  .header__login-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+  
+  /* style of hambegurger menu */
+  .header__burger-menu {
+    width: 2rem;
+  }
+  .header__burger-menu:hover {
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  /* style of menu bar(after opening)*/
+  .header__menu-bar--right ul {
+    position: fixed;
+    width: 18rem;
+    height: 100%;
+    z-index: 3;
+    background: #fff;
+    padding: 0;
+    left: -22rem;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    transition: 0.5s;
+  }
+  
+  .header__menu-bar--right ul li {
+    list-style-type: none;
+    padding: 32px;
+    background-color: #fff;
+  }
+  .header__menu-bar--right ul li:hover {
+    background: #cbc6c6;
+    border-right: 4px solid var(--primary-color);
+  }
+  
+  .header__menu-bar--right ul li a {
+    color: var(--primary-color);
+    font-weight: bolder;
+    font-family: alata;
+    font-size: 23px;
+    text-decoration: none;
+  }
+  
+  /* black blur background style (when menu is open) */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0009;
+    backdrop-filter: blur(5px);
+    z-index: 2;
+  }
+  
+  /* style of login-box (after open) */
+  .login-box {
+    position: fixed;
+    z-index: 7;
+    width: 100%;
+    top: -18px;
+    left: 0;
+    height: 105%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #0009;
+    backdrop-filter: blur(5px);
+  }
+  
+  .login-box__close-btn {
+    font-size: 41px;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-align: center;
+    right: 25px;
+    top: 40px;
+    cursor: pointer;
+    color: #ff7f7f;
+    border-radius: 100%;
+  }
+  .login-box__title {
+    text-align: center;
+    font-size: 26px;
+    margin-top: 8px;
+    margin-bottom: -12px;
+    font-weight: bolder;
+    color: var(--primary-color);
+  }
+  
+  .login-box--form {
+    position: relative;
+    background-color: #fff;
+    width: 22rem;
+    border-radius: 13px;
+    box-shadow: 0px 0px 20px 7px #000000a3;
+    height: 27rem;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    padding: 1rem 2rem;
+  }
+  .login-box input {
+    text-justify: center;
+    height: 32px;
+    font-size: 19px;
+    padding: 5px 10px;
+    border: 1px solid #6e6e6e;
+    border-radius: 8px;
+    background-color: #e6e6e6;
+    outline: none;
+    box-shadow: inset #4e4e4e 0px 0px 9px 0px;
+    transition: 0.4s all;
+    font-family: alata;
+  }
+  .login-box input[type="submit"] {
+    width: 9rem;
+    height: 2.6rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    align-self: center;
+  }
+  .login-box input:focus {
+    transform: scale(1.03);
+    background-color: white;
+    border: none;
+    box-shadow: #282828 4px 3px 9px 0px;
+  }
+  
+  .login-box__pass--eye,
+  .login-box__pass--eye-off {
+    position: absolute;
+    top: 12.5rem;
+    right: 2.6rem;
+    width: 24px;
+    cursor: pointer;
+  }
+  
+  /* section botton of haeder */
+  .header__menu-container--bottom {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .header__section--botten--right {
+    position: relative;
+    width: 45%;
+  }
+  .header__img {
+    width: 100%;
+    border-radius: 100%;
+  }
+  .header__svg-background {
+    width: 119%;
+    fill: var(--primary-color);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .header__title {
+    font-family: ubuntu;
+    font-size: 95px;
+    margin-bottom: 0;
+    font-weight: 100;
+  }
+  .header__text {
+    max-width: 31rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .header__view-btn {
+    letter-spacing: 3px;
+    background-color: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    border-radius: 1.5rem;
+    margin-top: 60px;
+    border: 0.15rem solid var(--primary-color);
+    transition: 0.1s;
+  }
+  .hidden {
+    display: none;
+  }
+
+            </code>
+        </pre>
+        <button class="button" onclick="copyCssCode()">Copy CSS Code</button>
+        
+        <h2>JavaScript Code</h2>
+        <pre>
+            <code id="js-code">
+// Your JavaScript code here
+"use strict";
+
+// selecting
+const burgerIconMenu = document.querySelector(".header__burger-menu");
+const navBarmenu = document.getElementById("menu");
+const overlay = document.querySelector(".overlay");
+const loginBox = document.querySelector(".login-box");
+const boxSlider = document.querySelector(".foodlist-slider__slid-box--items");
+const containerProfile = document.querySelector(".header__account-profile");
+
+const loginBtn = document.querySelector(".header__login-btn");
+const loginBoxBtn = document.querySelector(".login-box__btn");
+const scrollBtns = document.querySelectorAll(".foodlist-slider__slid-box--btn");
+const closeLoginBoxBtn = document.querySelector(".login-box__close-btn");
+
+const inputEmail = document.querySelector(".login-box__name");
+const inputPassword = document.querySelector(".login-box__pass");
+
+const passwordEye = document.querySelector(".login-box__pass--eye");
+const passwordEyeOff = document.querySelector(".login-box__pass--eye-off");
+
+const account1 = {
+  name: "Mahendra Singh Dhoni",
+  pict: "images/peson 1.png",
+  email: "dhoni7@gmail.com",
+  pass: "JL112233",
+};
+const account2 = {
+  name: "Virat Kohali",
+  pict: "images/peson 2.jpg",
+  email: "virat18@gmail.com",
+  pass: "king18",
+};
+
+// definde defulte
+let MenuIsOpen;
+function init() {
+  MenuIsOpen = false; // includ position of menu
+  navBarmenu.style.left = "-22rem";
+  overlay.classList.add("hidden");
+  passwordEyeOff.style.display = "none";
+  containerProfile.innerHTML = "";
+}
+init();
+
+// =============================== function ================================
+let currentAccount;
+// definde openning and closing menu function
+const openCloseMenu = function () {
+  if (MenuIsOpen == false) {
+    navBarmenu.style.left = "0rem";
+    overlay.classList.remove("hidden");
+    MenuIsOpen = true;
+  } else {
+    init();
+  }
+};
+
+// definde showing and hiding Login box
+const openCloseLoginBox = function () {
+  if (loginBox.classList.contains("hidden")) {
+    loginBox.classList.remove("hidden");
+  } else {
+    loginBox.classList.add("hidden");
+  }
+};
+
+// definde showing and hiding password in Login Box
+const showHidePass = function () {
+  if (inputPassword.type === "password") {
+    passwordEyeOff.style.display = "block";
+    passwordEye.style.display = "none";
+    inputPassword.type = "text";
+  } else {
+    passwordEyeOff.style.display = "none";
+    passwordEye.style.display = "block";
+    inputPassword.type = "password";
+  }
+};
+
+// set Lgin info
+const setLoginInfo = function (account) {
+  containerProfile.innerHTML = `
+    <div class="header__account-profile--pict">
+      <img src="${account.pict}" alt="profile" />
+    </div>
+    <h3 class="header__account-profile--name">${account.name}</h3>
+    <p class="header__account-profile-btn">&#10094;</p>`;
+
+  loginBtn.style.display = "none";
+};
+
+// ================================================================================
+
+// Click on Hamburger icon's menu(openning) & overlay menu(closing menu)
+burgerIconMenu.addEventListener("click", openCloseMenu);
+overlay.addEventListener("click", openCloseMenu);
+
+// click on Login botton & close botton for login box
+loginBtn.addEventListener("click", openCloseLoginBox);
+closeLoginBoxBtn.addEventListener("click", openCloseLoginBox);
+
+//click on Eyes in password input
+passwordEye.addEventListener("click", showHidePass);
+passwordEyeOff.addEventListener("click", showHidePass);
+
+loginBoxBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  accounts.forEach((acc) => {
+    if (acc.email === inputEmail.value && acc.pass === inputPassword.value) {
+      console.log("hey");
+      setLoginInfo(acc);
+      openCloseLoginBox();
+    }
+  });
+});
+// =================================================================================
+
+// clicking for scroll the box in foodlist Section
+
+for (const btn of scrollBtns) {
+  btn.addEventListener("click", function () {
+    // making function of scrolling
+    const sizeOfScroll = function (size) {
+      if (btn.classList.contains("left-btn")) {
+        boxSlider.style.transform = "translate(0px, 0px)";
+      } else {
+        boxSlider.style.transform = `translate(${size}px, 0px)`;
+      }
+    };
+
+    if (window.innerWidth <= 480) {
+      // in less then 360px of screen's size
+      sizeOfScroll(-250);
+    } else if (window.innerWidth <= 300) {
+      sizeOfScroll();
+    } else {
+      // in over then 360px of screen's size
+      sizeOfScroll(-435);
+    }
+  });
+}
+
+// Loding animation
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector("html").scrollIntoView({ behavior: "smooth" });
+});
+
+const itemsAnimation = document.querySelectorAll(".loding-animation");
+const obsCallback = function (entries, observer) {
+  const [entry] = entries;
+  if (entry.isIntersecting) {
+    entry.target.style.transform = "translateY(0)";
+    entry.target.style.opacity = "1";
+    observer.unobserve(entry.target);
+  }
+};
+
+const observer = new IntersectionObserver(obsCallback, {
+  root: null,
+  threshold: 0.25,
+});
+
+itemsAnimation.forEach((i) => {
+  observer.observe(i);
+});
+
+
+            </code>
+        </pre>
+        <button class="button" onclick="copyJsCode()">Copy JavaScript Code</button>
+    </div>
+    
+    <script>
+        function copyHtmlCode() {
+            var htmlCode = document.getElementById('html-code').innerText;
+            copyCode(htmlCode);
+        }
+        
+        function copyCssCode() {
+            var cssCode = document.getElementById('css-code').innerText;
+            copyCode(cssCode);
+        }
+        
+        function copyJsCode() {
+            var jsCode = document.getElementById('js-code').innerText;
+            copyCode(jsCode);
+        }
+        
+        function copyCode(code) {
+            var textArea = document.createElement('textarea');
+            textArea.value = code;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+            alert('Code copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
