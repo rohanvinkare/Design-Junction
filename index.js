@@ -1,6 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
-mongoose.connect("mongodb+srv://rohanvinkare2022:nhG5o9bcBMOyKGtD@rohanvinkare.fkaqp16.mongodb.net/Design-Junction");
+mongoose.connect(process.env.Atlas_String);
 
 const express = require("express");
 const cookieParser = require('cookie-parser');
