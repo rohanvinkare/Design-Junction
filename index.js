@@ -42,8 +42,12 @@ app.get("/api/admin/all-routes", authMiddleware, routerController.getAllRoutes)
 
 //============================pages to render===========================
 
+// app.get("/", (req, res) => {
+//   res.render("home");
+// })
+
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render(__dirname + "/views/home.ejs");
 })
 
 app.get("/login", (req, res) => {
