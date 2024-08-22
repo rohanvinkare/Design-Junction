@@ -23,21 +23,28 @@ To set up the project on your PC, follow these steps:
    ```bash
    git clone https://github.com/TeamVishisht/design-junction.git
 
-2. **Set Up**
-   Go to the .env File and set your MongoDB string for database access.
+3. **Create .env file**
+     ```bash
+     Atlas_String=
+     SERVER_PORT =
+     ACCESS_SECRET_TOKEN=
+     SMTP_HOST="smtp.gmail.com"
+     SMTP_MAIL=
+     SMTP_PASSWORD=
+     SMTP_PORT=
 
-3. **Install Dependencies**
+5. **Install Dependencies**
    ```bash
    npm install 
 
-4. **Run Project**
+6. **Run Project**
    ```bash
    nodemon server.js
 
-5. **Visit Site**
+7. **Visit Site**
    Go to (https://design-junction-git-main-rohan-vinkares-projects.vercel.app/) to visit the site and create your first user.
 
-6. **Admin Creation**
+8. **Admin Creation**
    After creating the first user, manually update the role to 1 in the MongoDB database. Log in to the website again with the same credentials, and this time you will access the admin panel.
 
 
