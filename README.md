@@ -24,6 +24,9 @@ To set up the project on your PC, follow these steps:
    git clone https://github.com/TeamVishisht/design-junction.git
 
 3. **Create .env file**
+ Add your details in the file :-
+ ACCESS_SECRET_TOKEN: This is related to the JWT token. You can use any string as a key.
+ For SMTP details, you can watch any video on YouTube to learn how to use SMTP mail services.
      ```bash
      Atlas_String=
      SERVER_PORT =
