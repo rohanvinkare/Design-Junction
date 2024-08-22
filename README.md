@@ -32,7 +32,7 @@ To set up the project on your PC, follow these steps:
 
 4. **Run Project**
    ```bash
-   nodemon index.js
+   nodemon server.js
 
 5. **Visit Site**
    Go to (https://design-junction-git-main-rohan-vinkares-projects.vercel.app/) to visit the site and create your first user.
