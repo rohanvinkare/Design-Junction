@@ -35,7 +35,7 @@ To set up the project on your PC, follow these steps:
    nodemon index.js
 
 5. **Visit Site**
-   Go to http://localhost:3000/ to visit the site and create your first user.
+   Go to (https://design-junction-git-main-rohan-vinkares-projects.vercel.app/) to visit the site and create your first user.
 
 6. **Admin Creation**
    After creating the first user, manually update the role to 1 in the MongoDB database. Log in to the website again with the same credentials, and this time you will access the admin panel.
