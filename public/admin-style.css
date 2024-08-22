@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.admin-panel {
+    padding: 3em;
+    background-color: rgb(83, 145, 211);
+    border-radius: 5px;
+}
+
+.side-panels {
+    background-color: #eee;
+    color: black;
+    font-weight: bolder;
+    font-size: 1em;
+    display: block;
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.side-panels:hover {
+    background-color: #1b7fc3;
+    color: white;
+    transition: background-color .3s;
+}
+
+.buttons-container {
+    width: 20%;
+}
+
+.viewUserTable {
+    width: 75%;
+}
+
+.delete-button {
+    transform: scale(1.2);
+    padding: 0.3em 1em;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.update-button {
+    transform: scale(1.2);
+    padding: 0.3em 1em;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.delete-button:hover, .update-button:hover{
+    transform: scale(1.5);
+    transition-duration: .2s;
+}
+
+
+#viewUserTable {
+    width: 100%;
+    background-color: #9b9b9b;
+    color: white;
+    border-collapse: collapse;
+}
+
+#viewUserTable th,
+#viewUserTable td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#viewUserTable th {
+    background-color: #eee;
+    color: rgb(0, 0, 0);
+}
+
+#viewUserTable th:hover {
+    background-color: #1b7fc3;
+    color: white;
+    transition: background-color .3s;
+}
+
+#viewUserTableBody td:hover {
+    background-color: #7e7e7e;
+    transition: background-color .3s;
+}

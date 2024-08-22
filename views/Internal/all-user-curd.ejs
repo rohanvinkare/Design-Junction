@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Data Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>User Data Table</h1>
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Permission</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Data will be populated here -->
+      </tbody>
+    </table>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Function to fetch user data from API
+        async function fetchUserData() {
+          const token = localStorage.getItem("accessToken"); // Get access token from localStorage
+          const url = "/api/get-user";
+
+          try {
+            const response = await fetch(url, {
+              method: "GET",
+              headers: {
+                Authorization: `Bearer ${token}`, // Add access token to headers
+                "Content-Type": "application/json",
+              },
+            });
+
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+
+            const data = await response.json();
+            populateUserTable(data.data); // Call function to populate user table
+          } catch (error) {
+            console.error("There was a problem fetching user data:", error);
+          }
+        }
+
+        // Function to populate user table with API data
+        function populateUserTable(userData) {
+          const tableBody = document.querySelector("#userTable tbody");
+
+          userData.forEach((user) => {
+            const row = tableBody.insertRow();
+            const idCell = row.insertCell(0);
+            const nameCell = row.insertCell(1);
+            const emailCell = row.insertCell(2);
+            const roleCell = row.insertCell(3);
+            const permissionCell = row.insertCell(3);
+
+            idCell.textContent = user.id;
+            nameCell.textContent = user.name;
+            emailCell.textContent = user.email;
+            roleCell.textContent = user.role;
+            permissionCell.textContent = user.permission;
+          });
+        }
+
+        fetchUserData(); // Call fetch user data function when page is loaded
+      });
+    </script>
+  </body>
+</html>

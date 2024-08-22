@@ -1,0 +1,67 @@
+body {
+    font-family: "Arial", sans-serif;
+  }
+
+  .editable-container {
+    position: relative;
+    max-width: none;
+  }
+
+  .editable {
+    text-align: left; /* Default text alignment */
+    font-style: normal; /* Default font style */
+    font-weight: normal; /* Default font weight */
+    text-decoration: none; /* Default text decoration */
+    text-transform: none; /* Default text transformation */
+    line-height: 1.5; /* Default line height */
+    letter-spacing: 0; /* Default letter spacing */
+    word-spacing: 0; /* Default word spacing */
+    text-indent: 0; /* Default text indentation */
+    text-shadow: none; /* Default text shadow */
+    vertical-align: baseline; /* Default vertical alignment */
+    list-style-type: none; /* Default list style type */
+    white-space: normal; /* Default line break behavior */
+  }
+
+  .developer-options {
+    position: absolute;
+    color: black;
+    z-index: 2000;
+    top: 0;
+    left: calc(80% + 10px); /* Adjusted to appear next to the text */
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: none;
+  }
+
+  .developer-options.active {
+    display: block;
+    font-size: small;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  input[type="color"] {
+    height: fit-content;
+  }
+
+  select {
+    height: fit-content;
+  }

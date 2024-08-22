@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/restaurant/css/restaurant_style.css" />
+  <link rel="stylesheet" href="/restaurant/css/restaurant_responsive.css" />
+  <link rel="stylesheet" href="/restaurant/css/restaurant_fonts.css" />
+  <link rel="stylesheet" href="/restaurant/css/restaurant_nomalize.css" />
+  <link rel="stylesheet" href="/restaurant/css/restaurant_modification.css" />
+  <link rel="shortcut icon" href="/restaurant/images/Favicon.png" type="image/x-icon" />
+  <title>Delicious Burger</title>
+</head>
+
+<body dir="ltr">
+  <header class="header">
+    <!-- Navbar Start -->
+    <section class="header__section--top">
+      <div class="container header__menu-container--top">
+        <div class="header__menu-bar--left">
+          <img class="header__logo" src="/restaurant/images/Logo.png" alt="burger" />
+          <button class="header__login-btn">Login</button>
+
+          <div style="width: 10%;">
+            <button id="viewCodeBtn" style="background-color: rgb(6, 71, 177); color: rgb(255, 255, 255); height: 60px; width: fit-content; border-radius: 12%;">
+              <p style="margin: 10px;">View Code</p>
+            </button>
+          </div>
+
+          <div class="header__account-profile">
+            <div class="header__account-profile--pict">
+              <img src="/restaurant/images/peson 1.png" alt="profile" />
+            </div>
+
+            <p class="header__account-profile-btn">&#10094;</p>
+          </div>
+
+          <div class="login-box hidden">
+            <span class="login-box__close-btn">&#10006;</span>
+            <form class="login-box--form" autocomplete="on">
+              <h3 class="login-box__title">Welcome back !</h3>
+              <input class="login-box__name" id="name" type="text" name="name" required placeholder="Email"
+                value="dhoni7@gmail.com" />
+
+              <input style="margin-bottom: -40px;" type="password" class="login-box__pass" id="pass" name="password"
+                minlength="8" required placeholder="password" value="Thala7" />
+
+              <svg viewBox="0 0 24 24" class="login-box__pass--eye" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                  stroke-width="0.528"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M12 5C8.24261 5 5.43602 7.4404 3.76737 9.43934C2.51521 10.9394 2.51521 13.0606 3.76737 14.5607C5.43602 16.5596 8.24261 19 12 19C15.7574 19 18.564 16.5596 20.2326 14.5607C21.4848 13.0606 21.4848 10.9394 20.2326 9.43934C18.564 7.4404 15.7574 5 12 5Z"
+                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path
+                    d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"
+                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="login-box__pass--eye-off">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9.76404 5.29519C10.4664 5.10724 11.2123 5 12 5C15.7574 5 18.564 7.4404 20.2326 9.43934C21.4848 10.9394 21.4846 13.0609 20.2324 14.5609C20.0406 14.7907 19.8337 15.0264 19.612 15.2635M12.5 9.04148C13.7563 9.25224 14.7478 10.2437 14.9585 11.5M3 3L21 21M11.5 14.9585C10.4158 14.7766 9.52884 14.0132 9.17072 13M4.34914 8.77822C4.14213 9.00124 3.94821 9.22274 3.76762 9.43907C2.51542 10.9391 2.51523 13.0606 3.76739 14.5607C5.43604 16.5596 8.24263 19 12 19C12.8021 19 13.5608 18.8888 14.2744 18.6944"
+                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+              </svg>
+
+              <p style="padding-left: 5px;">
+                Dont't you have any account ?
+                <a href="#" style="color: #e81922; font-family: alata;">Sign-up</a>
+              </p>
+
+              <input class="login-box__btn" type="submit" />
+            </form>
+          </div>
+        </div>
+
+        <div class="header__menu-bar--right" style="display: flex; gap: 33px; align-items: center;">
+          <input class="search-box" type="search" placeholder="Search Your Food" />
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="header__burger-menu w-5 h-5">
+            <path fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm7 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
+              clip-rule="evenodd" />
+          </svg>
+
+          <ul class="editable-container" id="menu">
+            <li class="header__menu-items editable">
+              <a href="#">Home</a>
+            </li>
+            <li class="header__menu-items editable"><a href="#">Menu</a></li>
+            <li class="header__menu-items editable">
+              <a href="#">Breakfast</a>
+            </li>
+            <li class="header__menu-items editable">
+              <a href="#">Fastfood</a>
+            </li>
+            <li class="header__menu-items editable">
+              <a href="#">Cuisine </a>
+            </li>
+            <li class="header__menu-items editable">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Navbar End -->
+
+    <!-- Introduction start -->
+    <section class="header__section--botten">
+      <div class="container header__menu-container--bottom loding-animation">
+        <div class="header__section--botten--right">
+          <img class="header__img" src="/restaurant/images/cooker.jpg" alt="cooker" />
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+            xml:space="preserve" class="header__svg-background" viewBox="0 0 160 150" id="svg-4d96">
+            <path d="M43.2,126.9c14.2,1.3,27.6,7,39.1,15.6c8.3,6.1,19.4,10.3,32.7,5.3c11.7-4.4,18.6-17.4,21-30.2c2.6-13.3,8.1-25.9,15.7-37.1
+                      c8.3-12.1,10.8-27.9,5.3-42.7C150.5,20.3,134.6,9,117,7.6C107.9,6.9,98.8,5,90.1,1.9C83-0.6,75-0.7,67.4,2.1
+                      c-9.9,3.7-17,11.6-20.1,21c-3.3,10.1-10.9,18-20.6,22.2c-0.1,0-0.1,0.1-0.2,0.1c-20.3,8.9-31,32-24.6,53.2
+                      C6.9,115.6,25.2,125.2,43.2,126.9z"></path>
+          </svg>
+        </div>
+
+        <div class="header__section--botten--left">
+          <div class="editable-container">
+            <h1 class="header__title">
+              <span class="editable" style="color: #e5550d; ">Indian</span>
+              <br />
+              <div class="editable-container">
+                <div class="editable">Spice Delight</div>
+              </div>
+            </h1>
+          </div>
+          <div class="editable-container">
+            <p class="header__text editable" contenteditable="true">
+              Authentic Indian flavors to tantalize your taste buds.
+              Experience the rich blend of spices in every dish, curated to
+              perfection.
+            </p>
+          </div>
+          <div class="editable-container">
+            <button class="header__view-btn editable">View Menu</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction Ends -->
+  </header>
+
+  <main class="main">
+    <!-- breackfast-gallery  -->
+    <section class="container">
+      <div class="breackfast-gallery">
+        <div class="breackfast-gallery__boxs">
+          <img src="/restaurant/images/BF-1.jpg" alt="breackfast" />
+        </div>
+        <div class="breackfast-gallery__boxs">
+          <img src="/restaurant/images/BF-2.jpg" alt="breackfast" />
+        </div>
+        <div class="breackfast-gallery__boxs">
+          <img src="/restaurant/images/BF-3.jpg" alt="breackfast" />
+        </div>
+        <div class="breackfast-gallery__boxs">
+          <img src="/restaurant/images/BF-4.jpg" alt="breackfast" />
+        </div>
+      </div>
+    </section>
+
+    <!-- breackfast-boxes -->
+    <section class="container">
+      <div class="breackfast-boxs loding-animation">
+        <div class="breackfast-boxs__box">
+          <div class="editable-container">
+            <h3 class="breackfast-boxs__title editable">​Breakfast</h3>
+          </div>
+          <div class="editable-container">
+            <p class="breakfast-boxs__text editable-content editable" id="t0" contenteditable="true">
+              Enjoy a variety of delicious <br />Indian breakfast options!Try
+              the <br />crispy masala dosa, flavorful poha, or classic
+              idli-sambar. Don't miss out on paratha and tasty accompaniments
+              like chai tea and coconut chutney. Explore the world of Indian
+              breakfast for a tasty start to your day!
+            </p>
+          </div>
+          <div class="editable-container">
+            <button class="breackfast-boxs__btn editable">See More</button>
+          </div>
+        </div>
+
+        <div class="breackfast-boxs__img">
+          <img src="/restaurant/images/BF-section.jpg" alt="breackfast" />
+        </div>
+
+        <div class="breackfast-boxs__red-circle"></div>
+      </div>
+    </section>
+
+    <!-- properties of resturant -->
+    <section class="properteies__background">
+      <div class="container properteies loding-animation">
+        <!-- box 1 -->
+        <div class="properteies__boxes">
+          <div class="properteies__boxes--top">
+            <div class="properteies__boxes--number">01</div>
+            <div class="properteies__boxes--title editable-container">
+              <div class="editable">Fresh Food</div>
+            </div>
+          </div>
+          <div class="properteies__boxes--bottom editable-container">
+            <p class="properteies__boxes-text editable">
+              Sample text. Click to select the text box. Click again or double
+              click to start editing the text.
+            </p>
+            <a href="#" class="editable"> See More </a>
+          </div>
+        </div>
+
+        <!-- box 2 -->
+        <div class="properteies__boxes">
+          <div class="properteies__boxes--top">
+            <div class="properteies__boxes--number">02</div>
+            <div class="properteies__boxes--title editable-container">
+              <div class="editable">Dinner Meals</div>
+            </div>
+          </div>
+          <div class="properteies__boxes--bottom editable-container">
+            <p class="properteies__boxes-text editable">
+              Sample text. Click to select the text box. Click again or double
+              click to start editing the text.
+            </p>
+            <a href="#" class="editable"> See More </a>
+          </div>
+        </div>
+
+        <!-- box 3 -->
+        <div class="properteies__boxes">
+          <div class="properteies__boxes--top">
+            <div class="properteies__boxes--number">03</div>
+            <div class="properteies__boxes--title editable-container">
+              <div class="editable">Classic Menu</div>
+            </div>
+          </div>
+          <div class="properteies__boxes--bottom editable-container">
+            <p class="properteies__boxes-text editable">
+              Sample text. Click to select the text box. Click again or double
+              click to start editing the text.
+            </p>
+            <a href="#" class="editable"> See More </a>
+          </div>
+        </div>
+
+        <!-- box 4 -->
+        <div class="properteies__boxes">
+          <div class="properteies__boxes--top">
+            <div class="properteies__boxes--number">04</div>
+            <div class="properteies__boxes--title editable-container">
+              <div class="editable">Chef's Special</div>
+            </div>
+          </div>
+          <div class="properteies__boxes--bottom editable-container">
+            <p class="properteies__boxes-text editable">
+              Sample text. Click to select the text box. Click again or double
+              click to start editing the text.
+            </p>
+            <a href="#" class="editable"> See More </a>
+          </div>
+        </div>
+
+        <!-- box 5 -->
+        <div class="properteies__boxes">
+          <div class="properteies__boxes--top">
+            <div class="properteies__boxes--number">05</div>
+            <div class="properteies__boxes--title editable-container">
+              <div class="editable">Vegan Dishesh</div>
+            </div>
+          </div>
+          <div class="properteies__boxes--bottom editable-container">
+            <p class="properteies__boxes-text editable">
+              Sample text. Click to select the text box. Click again or double
+              click to start editing the text.
+            </p>
+            <a href="#" class="editable"> See More </a>
+          </div>
+        </div>
+
+        <!-- box 6-->
+        <div class="properteies__boxes">
+          <div class="properteies__boxes--top">
+            <div class="properteies__boxes--number">06</div>
+            <div class="properteies__boxes--title editable-container">
+              <div class="editable">Fast Food</div>
+            </div>
+          </div>
+          <div class="properteies__boxes--bottom editable-container">
+            <p class="properteies__boxes-text editable">
+              Sample text. Click to select the text box. Click again or double
+              click to start editing the text.
+            </p>
+            <a href="#" class="editable"> See More </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery services -->
+    <section class="container delivery loding-animation">
+      <div class="delivery__img">
+        <img src="/restaurant/images/delivery-back.jpg" alt="food" />
+      </div>
+      <div class="delivery__red"></div>
+      <div class="delivery__box">
+        <h2 class="delivery__box--title editable-container">
+          <div class="editable">Delivery services</div>
+        </h2>
+        <div class="editable-container">
+          <p class="delivery__box--text editable">
+            Experience the convenience of our restaurant's swift and reliable
+            delivery service. From our kitchen to your doorstep, savor the
+            delectable flavors of our curated menu in the comfort of your
+            home. Enjoy a seamless culinary journey with prompt, contactless
+            deliveries, ensuring a delightful dining experience at your
+            convenience.
+          </p>
+          <div class="editable-container">
+            <button class="header__view-btn editable">See More</button>
+          </div>
+    </section>
+
+    <!-- Indian fast food section (advertise) -->
+    <section class="indian-food">
+      <div class="container indian-food__flexing editable-container">
+        <h5 class="indian-food__small-title">​must-try Indian foods</h5>
+        <h2 class="indian-food__big-title">Fast Food</h2>
+
+        <button class="indian-food__button editable">View Menu</button>
+      </div>
+    </section>
+
+    <!-- burger menu section -->
+    <section class="burger-menu container loding-animation">
+      <!-- header of section ( title, describtion ) -->
+      <div class="burger-menu__top editable-container">
+        <h2 class="burger-menu__top--title editable">Indian Cuisine</h2>
+        <p class="burger-menu__top--text editable">
+          Spice up your senses with the vibrant flavors of India.
+        </p>
+      </div>
+
+      <!-- boxes of items -->
+      <div class="burger-menu__items">
+        <!-- burger box 1-->
+        <div class="burger-menu__item">
+          <div class="burger-menu__item__contant editable-container">
+            <h3 class="burger-menu__item__burger-name editable">Paneer Tikka</h3>
+            <p class="burger-menu__item__cost editable">Rs 129</p>
+            <button class="burger-menu__item__btn editable">Add to cart</button>
+          </div>
+          <img class="burger-menu__item__background" src="/restaurant/images/hum-1.jpg" alt="burger-menu" />
+        </div>
+
+        <!-- burger box 2-->
+        <div class="burger-menu__item ">
+          <div class="burger-menu__item__contant editable-container">
+            <h3 class="burger-menu__item__burger-name editable">Massala Dosa</h3>
+            <p class="burger-menu__item__cost editable">Rs 89</p>
+            <button class="burger-menu__item__btn editable">Add to cart</button>
+          </div>
+          <img class="burger-menu__item__background" src="/restaurant/images/hum-2.jpg" alt="burger-menu" />
+        </div>
+
+        <!-- burger box 3-->
+        <div class="burger-menu__item">
+          <div class="burger-menu__item__contant editable-container">
+            <h3 class="burger-menu__item__burger-name editable">Dum Biryani</h3>
+            <p class="burger-menu__item__cost editable">Rs 189</p>
+            <button class="burger-menu__item__btn editable">Add to cart</button>
+          </div>
+          <img class="burger-menu__item__background" src="/restaurant/images/hum-3.jpg" alt="burger-menu" />
+        </div>
+
+        <!-- burger box 4 -->
+        <div class="burger-menu__item">
+          <div class="burger-menu__item__contant editable-container">
+            <h3 class="burger-menu__item__burger-name editable">Special Offer</h3>
+            <p class="burger-menu__item__cost editable">Rs 199</p>
+            <button class="burger-menu__item__btn editable">Add to cart</button>
+          </div>
+          <img class="burger-menu__item__background" src="/restaurant/images/hum-4.jpg" alt="burger-menu" />
+        </div>
+
+        <!-- burger box 5-->
+        <div class="burger-menu__item">
+          <div class="burger-menu__item__contant editable-container">
+            <h3 class="burger-menu__item__burger-name editable">Daal Tadaka</h3>
+            <p class="burger-menu__item__cost editable">Rs 139</p>
+            <button class="burger-menu__item__btn editable">Add to cart</button>
+          </div>
+          <img class="burger-menu__item__background" src="/restaurant/images/hum-5.jpg" alt="burger-menu" />
+        </div>
+
+        <!-- burger box 6-->
+        <div class="burger-menu__item">
+          <div class="burger-menu__item__contant editable-container">
+            <h3 class="burger-menu__item__burger-name editable">King Choola</h3>
+            <p class="burger-menu__item__cost editable">Rs 119</p>
+            <button class="burger-menu__item__btn editable">Add to cart</button>
+          </div>
+          <img class="burger-menu__item__background" src="/restaurant/images/hum-6.jpg" alt="burger-menu" />
+        </div>
+      </div>
+    </section>
+
+    <!-- slider section of food-list -->
+    <section class="foodlist-slider">
+      <div class="container foodlist-slider--flex">
+
+        <div class="foodlist-slider__slid-box">
+
+          <div class="foodlist-slider__slid-box--items ">
+
+            <div class="foodlist-slider__slid-box--item editable-container">
+              <img src="/restaurant/images/burger.png" alt="" />
+              <h3 class="editable">Burgers</h3>
+              <p class="editable">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris
+              </p>
+              <button class="editable">View Menu</button>
+            </div>
+
+            <div class="foodlist-slider__slid-box--item editable-container">
+              <img src="/restaurant/images/pizza-slice.png" alt="" />
+              <h3 class="editable">Pizza & Roll</h3>
+              <p class="editable">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris
+              </p>
+              <button class="editable">View Menu</button>
+            </div>
+          </div>
+
+          <div class="foodlist-slider__slid-box--btn left-btn">
+            <span style="font-size: 38px; margin-left: 7px;">&#8619;</span>
+          </div>
+          <div class="foodlist-slider__slid-box--btn right-btn">
+            <span style="font-size: 38px; margin-left: 7px;">&#8620;</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-section">
+    <div class="container footer-section--flex">
+      <div class="footer-section__img-box">
+        <img src="/restaurant/images/back-footer.jpg" alt="img" />
+      </div>
+
+      <div class="footer-section__contact  editable-container">
+        <div class="footer-section__contact--email">
+          <h2 class=" editable">SUBSCRIBE</h2>
+          <h6 class=" editable">to the Resturant and Food update</h6>
+          <form>
+            <input type="text" style="margin-bottom: 18px;" placeholder="Enter a valid Email" />
+            <input type="button" value="submit" />
+          </form>
+        </div>
+        <div class="footer-section__contact--info editable-container">
+          <div class="footer-section__contact--info__follow editable ">
+            <h2>Follow us</h2>
+            <div class="footer-section__social">
+              <!-- instagram icon -->
+              <svg height="40px" width="40px" fill="white" style="
+                    fill-rule: evenodd;
+                    clip-rule: evenodd;
+                    stroke-linejoin: round;
+                    stroke-miterlimit: 2;
+                  " version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M256,0c141.29,0 256,114.71 256,256c0,141.29 -114.71,256 -256,256c-141.29,0 -256,-114.71 -256,-256c0,-141.29 114.71,-256 256,-256Zm0,96c-43.453,0 -48.902,0.184 -65.968,0.963c-17.03,0.777 -28.661,3.482 -38.839,7.437c-10.521,4.089 -19.444,9.56 -28.339,18.455c-8.895,8.895 -14.366,17.818 -18.455,28.339c-3.955,10.177 -6.659,21.808 -7.437,38.838c-0.778,17.066 -0.962,22.515 -0.962,65.968c0,43.453 0.184,48.902 0.962,65.968c0.778,17.03 3.482,28.661 7.437,38.838c4.089,10.521 9.56,19.444 18.455,28.34c8.895,8.895 17.818,14.366 28.339,18.455c10.178,3.954 21.809,6.659 38.839,7.436c17.066,0.779 22.515,0.963 65.968,0.963c43.453,0 48.902,-0.184 65.968,-0.963c17.03,-0.777 28.661,-3.482 38.838,-7.436c10.521,-4.089 19.444,-9.56 28.34,-18.455c8.895,-8.896 14.366,-17.819 18.455,-28.34c3.954,-10.177 6.659,-21.808 7.436,-38.838c0.779,-17.066 0.963,-22.515 0.963,-65.968c0,-43.453 -0.184,-48.902 -0.963,-65.968c-0.777,-17.03 -3.482,-28.661 -7.436,-38.838c-4.089,-10.521 -9.56,-19.444 -18.455,-28.339c-8.896,-8.895 -17.819,-14.366 -28.34,-18.455c-10.177,-3.955 -21.808,-6.66 -38.838,-7.437c-17.066,-0.779 -22.515,-0.963 -65.968,-0.963Zm0,28.829c42.722,0 47.782,0.163 64.654,0.933c15.6,0.712 24.071,3.318 29.709,5.509c7.469,2.902 12.799,6.37 18.397,11.969c5.6,5.598 9.067,10.929 11.969,18.397c2.191,5.638 4.798,14.109 5.509,29.709c0.77,16.872 0.933,21.932 0.933,64.654c0,42.722 -0.163,47.782 -0.933,64.654c-0.711,15.6 -3.318,24.071 -5.509,29.709c-2.902,7.469 -6.369,12.799 -11.969,18.397c-5.598,5.6 -10.928,9.067 -18.397,11.969c-5.638,2.191 -14.109,4.798 -29.709,5.509c-16.869,0.77 -21.929,0.933 -64.654,0.933c-42.725,0 -47.784,-0.163 -64.654,-0.933c-15.6,-0.711 -24.071,-3.318 -29.709,-5.509c-7.469,-2.902 -12.799,-6.369 -18.398,-11.969c-5.599,-5.598 -9.066,-10.928 -11.968,-18.397c-2.191,-5.638 -4.798,-14.109 -5.51,-29.709c-0.77,-16.872 -0.932,-21.932 -0.932,-64.654c0,-42.722 0.162,-47.782 0.932,-64.654c0.712,-15.6 3.319,-24.071 5.51,-29.709c2.902,-7.468 6.369,-12.799 11.968,-18.397c5.599,-5.599 10.929,-9.067 18.398,-11.969c5.638,-2.191 14.109,-4.797 29.709,-5.509c16.872,-0.77 21.932,-0.933 64.654,-0.933Zm0,49.009c-45.377,0 -82.162,36.785 -82.162,82.162c0,45.377 36.785,82.162 82.162,82.162c45.377,0 82.162,-36.785 82.162,-82.162c0,-45.377 -36.785,-82.162 -82.162,-82.162Zm0,135.495c-29.455,0 -53.333,-23.878 -53.333,-53.333c0,-29.455 23.878,-53.333 53.333,-53.333c29.455,0 53.333,23.878 53.333,53.333c0,29.455 -23.878,53.333 -53.333,53.333Zm104.609,-138.741c0,10.604 -8.597,19.199 -19.201,19.199c-10.603,0 -19.199,-8.595 -19.199,-19.199c0,-10.604 8.596,-19.2 19.199,-19.2c10.604,0 19.201,8.596 19.201,19.2Z" />
+              </svg>
+              <!-- facebook icon -->
+              <svg enable-background="new 0 0 56.693 56.693" height="45px" width="45px" fill="white" id="Layer_1"
+                version="1.1" viewBox="0 0 56.693 56.693" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path
+                  d="M28.347,5.157c-13.6,0-24.625,11.027-24.625,24.625c0,13.6,11.025,24.623,24.625,24.623c13.6,0,24.625-11.023,24.625-24.623  C52.972,16.184,41.946,5.157,28.347,5.157z M34.864,29.679h-4.264c0,6.814,0,15.207,0,15.207h-6.32c0,0,0-8.307,0-15.207h-3.006  V24.31h3.006v-3.479c0-2.49,1.182-6.377,6.379-6.377l4.68,0.018v5.215c0,0-2.846,0-3.398,0c-0.555,0-1.34,0.277-1.34,1.461v3.163  h4.818L34.864,29.679z" />
+              </svg>
+              <!-- github icon -->
+              <?xml version="1.0" ?><svg height="40px" width="40px" fill="white" enable-background="new 0 0 32 32"
+                version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="OUTLINE_copy_2">
+                  <g>
+                    <path
+                      d="M16,0C7.163,0,0,7.163,0,16c0,8.837,7.164,16,16,16c8.837,0,16-7.163,16-16C32,7.163,24.837,0,16,0z M18.067,18.96    c0.333,0.289,0.592,1.308,0.592,1.776v4.144h-2.365h-2.368c0,0,0.007-1.405,0-2.368c-3.24,0.697-4.144-1.776-4.144-1.776    C9.19,19.552,8.598,18.96,8.598,18.96c-1.184-0.703,0-0.592,0-0.592c1.184,0,1.776,1.184,1.776,1.184    c1.039,1.764,2.888,1.48,3.552,1.184c0-0.592,0.259-1.487,0.592-1.776c-2.586-0.291-4.738-1.776-4.738-4.736    c0-2.96,0.594-3.552,1.186-4.144c-0.12-0.292-0.615-1.37,0.018-2.96c0,0,1.163,0,2.347,1.776c0.587-0.587,2.368-0.592,2.961-0.592    c0.591,0,2.373,0.005,2.959,0.592c1.184-1.776,2.35-1.776,2.35-1.776c0.633,1.59,0.138,2.668,0.018,2.96    c0.592,0.592,1.184,1.184,1.184,4.144C22.804,17.184,20.654,18.669,18.067,18.96z" />
+                  </g>
+                </g>
+              </svg>
+
+              <!-- google icon -->
+              <?xml version="1.0" ?><svg height="40px" width="40px" fill="white" id="Layer_1"
+                style="enable-background: new 0 0 56.6934 56.6934;" version="1.1" viewBox="0 0 56.6934 56.6934"
+                xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <polygon points="29.3938,31.666 39.309,38.5604 39.309,24.8362 34.9235,27.8569 " />
+                <path
+                  d="M28.3472,3.9229c-13.5996,0-24.625,11.0234-24.625,24.623c0,13.5997,11.0254,24.625,24.625,24.625  c13.5986,0,24.624-11.0253,24.624-24.625C52.9712,14.9463,41.9458,3.9229,28.3472,3.9229z M39.9141,39.7094v0.0007H16.7774h-0.8704  c-1.3447,0-2.4451-1.1003-2.4451-2.4451V20.5627c0-1.3448,1.1003-2.4451,2.4451-2.4451l0.0096,0.0072l-0.0096-0.0078h24.9518  c1.3447,0,2.445,1.1002,2.445,2.4449v0.7087l0.0007-0.0005l-0.0007,0.0007l0.004,15.9963  C43.2494,39.0451,42.479,39.6797,39.9141,39.7094z" />
+                <path
+                  d="M28.3421,32.2622c-0.1196,0-0.2391-0.0359-0.3419-0.1073l-0.1786-0.1244l-10.1835,7.0811h21.4153l-10.1863-7.0829  C28.8671,32.0287,28.4607,32.2622,28.3421,32.2622z" />
+                <polygon points="40.858,18.1176 40.8587,18.117 40.8565,18.1187 " />
+                <polygon points="39.037,18.7154 17.7191,18.7154 28.3432,26.5924 " />
+                <polygon points="27.2877,31.659 17.382,24.8359 17.3764,38.5647 27.2976,31.666 " />
+              </svg>
+            </div>
+
+            <p>
+              ©2030 Privacy policy
+            </p>
+          </div>
+
+        
+            <div class="footer-section__contact--info__location editable">
+              <h2>Location</h2>
+              <p >630, Gnan Marg Sri City, Sathyavedu, Andhra Pradesh 517646</p>
+            </div>
+          
+
+
+        </div>
+      </div>
+    </div>
+    <div class="footer-section__img-box--red"></div>
+  </footer>
+  <script src="/restaurant/script/restaurant_modification.js"></script>
+  <script src="/restaurant/script/restaurant_script.js"></script>
+
+  <div id="storedText" style="background-color: yellow; height: 80px; color: red;"></div>
+
+  <script>
+    // Add an event listener to the button
+// Add an event listener to the button
+document.getElementById('viewCodeBtn').addEventListener('click', function() {
+      // Redirect to the specified link when the button is clicked
+      window.location.href = '/api/food/restaurant/code';
+    });
+    </script>
+</body>
+
+</html>
