@@ -1,4 +1,4 @@
-# Project: Design Junction by Team Vishisht
+# Design Junction
 
 ## Table of Contents
 1. [Description](#description)
